@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test App</title>
+</head>
+<body>
+    <button>test</button>
+    <p>This is a subtext</p>
+</body>
+<script>
+    const btn = document.querySelector('button')
+    const p = document.querySelector('p')
+
+    btn.onclick = async () => {
+        p.innerHTML = await navigator.credentials.create(PublicKeyCredential.parseCreationOptionsFromJSON({"rp": {"name": "Toni Inc", "id": "192.168.76.177"}, "user": {"id": "GebRAtAcFGMo4AkevVT0mvVVzyMGrt0wnIEMSaiAIEglrr9cMZnVCmkNPmBm7go3WzSyBKLWZAWgk1XjyUcBTg", "name": "test", "displayName": "test"}, "challenge": "kkY4kSYmjsZlFD72HRKM8mLatfIVbVTxYpqLT4GqK7h4HmT16ZmztY-mAGHeuNLibgGTfJDF3hDUbtcxJqIWUQ", "pubKeyCredParams": [{"type": "public-key", "alg": -7}, {"type": "public-key", "alg": -8}, {"type": "public-key", "alg": -36}, {"type": "public-key", "alg": -37}, {"type": "public-key", "alg": -38}, {"type": "public-key", "alg": -39}, {"type": "public-key", "alg": -257}, {"type": "public-key", "alg": -258}, {"type": "public-key", "alg": -259}], "timeout": 60000, "excludeCredentials": [], "attestation": "none"}))
+    }
+</script>
+</html>
